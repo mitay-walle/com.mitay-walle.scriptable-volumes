@@ -15,11 +15,11 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 1
-  m_FogColor: {r: 0.67326826, g: 0.7515145, b: 0, a: 1}
+  m_FogColor: {r: 0.6711179, g: 0.7564605, b: 0, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.05
   m_LinearFogStart: 0
-  m_LinearFogEnd: 44.78797
+  m_LinearFogEnd: 44.09553
   m_AmbientSkyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_AmbientEquatorColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_AmbientGroundColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 651002979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59129d7fe14aa754faf7ead7d67b7154, type: 3}
+  m_Script: {fileID: 11500000, guid: 66fa0b01c53abee46b2aba18ac97d9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isGlobal: 0
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803248991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59129d7fe14aa754faf7ead7d67b7154, type: 3}
+  m_Script: {fileID: 11500000, guid: 66fa0b01c53abee46b2aba18ac97d9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isGlobal: 1
@@ -487,7 +487,7 @@ Transform:
   m_GameObject: {fileID: 1930291710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -12.1}
+  m_LocalPosition: {x: 0, y: 0, z: -11.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
