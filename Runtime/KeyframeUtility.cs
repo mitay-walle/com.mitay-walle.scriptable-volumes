@@ -40,7 +40,7 @@ namespace Plugins.VFX.Volumes
 	/// </example>
 	public class KeyframeUtility
 	{
-		private static Keyframe[] EMPTY_KEYS = Array.Empty<Keyframe>();
+		public static Keyframe[] EMPTY_KEYS = Array.Empty<Keyframe>();
 		/// <summary>
 		/// Helper function to remove all control points for an animation curve. Since animation curves are reused in a pool,
 		/// this function clears existing keys so the curve is ready for reuse.

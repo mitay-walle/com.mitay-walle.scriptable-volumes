@@ -1846,7 +1846,18 @@ namespace Plugins.VFX.Volumes
 		/// <inheritdoc/>
 		public override void SetValue(ScriptableVolumeParameter parameter)
 		{
+			#if UNITY_2022_1_OR_NEWER
 			m_Value.CopyFrom(((AnimationCurveParameter)parameter).m_Value);
+#else
+			m_Value.keys = KeyframeUtility.EMPTY_KEYS;
+			var rhsCurve = ((AnimationCurveParameter)parameter).m_Value;
+			Keyframe[] keys = rhsCurve.keys;
+			foreach (Keyframe keyframe in keys)
+			{
+				m_Value.AddKey(keyframe);
+			}
+#endif
+			
 		}
 
 		/// <inheritdoc/>
