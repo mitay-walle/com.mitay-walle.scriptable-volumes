@@ -1,0 +1,16 @@
+{
+    "name": "SceneLightingProfile",
+    "rootNamespace": "",
+    "references": [
+        "GUID:1112cdb67d6151144bf120e0840d8c8d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

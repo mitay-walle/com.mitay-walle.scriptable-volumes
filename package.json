@@ -1,0 +1,13 @@
+{
+  "name": "com.mitay-walle.scriptable-volumes",
+  "version": "1.0.0",
+  "displayName": "Scriptable Volumes",
+  "description": "Volume-system extracted from ScriptableRenderPipeline, allowing to blend any parameters, using collider-shapes + distances",
+   "unity": "2017.1",
+   "samples": [
+  {
+	  "name": "Samples",
+	  "path": "Samples~"
+  }
+  ]
+}
