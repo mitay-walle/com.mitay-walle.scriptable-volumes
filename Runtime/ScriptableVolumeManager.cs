@@ -287,7 +287,7 @@ namespace Plugins.VFX.Volumes
 					if (t.IsAbstract)
 						continue;
 
-					var isSupported = SupportedOnCustomProfileAttribute.IsTypeSupportedOnRenderPipeline(t, customProfile);
+					var isSupported = SupportedOnScriptableProfileAttribute.IsTypeSupportedOnRenderPipeline(t, customProfile);
 
 					if (isSupported)
 						list.Add(t);

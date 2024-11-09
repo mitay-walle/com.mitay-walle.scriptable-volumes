@@ -6,7 +6,7 @@
    "unity": "2017.1",
    "samples": [
   {
-	  "name": "Samples",
+	  "displayName": "Samples",
 	  "path": "Samples~"
   }
   ]

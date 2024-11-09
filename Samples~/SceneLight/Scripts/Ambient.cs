@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 namespace Plugins.VFX.Volumes
 {
 	[Serializable]
-	[SupportedOnCustomProfile(typeof(CustomVolumeProfile))]
+	[SupportedOnScriptableProfile(typeof(ScriptableVolumeProfile))]
 	public sealed class Ambient : SceneLightingComponent
 	{
 		[InlineProperty] public EnumParameter<AmbientMode> mode = new(AmbientMode.Custom);

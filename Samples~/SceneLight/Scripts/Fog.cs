@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Plugins.VFX.Volumes
 {
 	[Serializable]
-	[SupportedOnCustomProfile(typeof(CustomVolumeProfile))]
+	[SupportedOnScriptableProfile(typeof(ScriptableVolumeProfile))]
 	public sealed class Fog : SceneLightingComponent
 	{
 		[InlineProperty] public EnumParameter<FogMode> mode = new(FogMode.Linear);
