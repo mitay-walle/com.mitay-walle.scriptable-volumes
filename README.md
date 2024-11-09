@@ -33,6 +33,3 @@ Unity Volume-system extracted from ScriptableRenderPipeline, allowing to blend a
 			}
 		}
 	}
-
-# Work In Progress
-- remove Core SR Libary dependency
