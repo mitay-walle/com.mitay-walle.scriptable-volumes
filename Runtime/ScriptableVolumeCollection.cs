@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace Plugins.VFX.Volumes
 {

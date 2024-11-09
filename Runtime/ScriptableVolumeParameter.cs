@@ -7,9 +7,6 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using CoreUtils = UnityEngine.Rendering.CoreUtils;
-using KeyframeUtility = UnityEngine.Rendering.KeyframeUtility;
-using TextureDimension = UnityEngine.Rendering.TextureDimension;
 
 namespace Plugins.VFX.Volumes
 {
@@ -85,16 +82,12 @@ namespace Plugins.VFX.Volumes
 		/// <see cref="UnityEngine.Rendering.VolumeComponent"/>, thus allowing access to previously
 		/// inaccessible fields and properties.
 		/// </remarks>
-		protected internal virtual void OnEnable()
-		{
-		}
+		protected internal virtual void OnEnable() { }
 
 		/// <summary>
 		/// Unity calls this method when the parent <see cref="UnityEngine.Rendering.VolumeComponent"/> goes out of scope.
 		/// </summary>
-		protected internal virtual void OnDisable()
-		{
-		}
+		protected internal virtual void OnDisable() { }
 
 		/// <summary>
 		/// Checks if a given type is an <see cref="ObjectParameter{T}"/>.
@@ -160,7 +153,7 @@ namespace Plugins.VFX.Volumes
 		/// <summary>
 		/// The value stored and serialized by this parameter.
 		/// </summary>
-		[SerializeField, HorizontalGroup, LabelText(" "),LabelWidth(15),EnableIf(nameof(m_OverrideState))]
+		[SerializeField, HorizontalGroup, LabelText(" "), LabelWidth(15), EnableIf(nameof(m_OverrideState))]
 		protected T m_Value;
 
 		/// <summary>
@@ -179,9 +172,7 @@ namespace Plugins.VFX.Volumes
 		/// Creates a new <see cref="ScriptableVolumeParameter{T}"/> instance.
 		/// </summary>
 		public ScriptableVolumeParameter()
-			: this(default, false)
-		{
-		}
+			: this(default, false) { }
 
 		/// <summary>
 		/// Creates a new <see cref="ScriptableVolumeParameter{T}"/> instance.
@@ -340,9 +331,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public EnumParameter(T value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 	}
 
 	/// <summary>
@@ -357,9 +346,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter</param>
 		/// <param name="overrideState">The initial override state for the parameter</param>
 		public BoolParameter(bool value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Creates a new <see cref="BoolParameter"/> instance.
@@ -403,9 +390,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public LayerMaskParameter(LayerMask value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 	}
 
 	/// <summary>
@@ -427,9 +412,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public IntParameter(int value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Interpolates between two <c>int</c> values.
@@ -464,9 +447,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpIntParameter(int value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 	}
 
 	/// <summary>
@@ -776,9 +757,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter</param>
 		/// <param name="overrideState">The initial override state for the parameter</param>
 		public FloatParameter(float value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Interpolates between two <c>float</c> values.
@@ -813,9 +792,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpFloatParameter(float value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 	}
 
 	/// <summary>
@@ -1257,9 +1234,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public ColorParameter(Color value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Creates a new <see cref="ColorParameter"/> instance.
@@ -1327,9 +1302,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpColorParameter(Color value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Creates a new <see cref="NoInterpColorParameter"/> instance.
@@ -1362,9 +1335,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public Vector2Parameter(Vector2 value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Interpolates between two <c>Vector2</c> values.
@@ -1392,9 +1363,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpVector2Parameter(Vector2 value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 	}
 
 	/// <summary>
@@ -1410,9 +1379,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public Vector3Parameter(Vector3 value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Interpolates between two <c>Vector3</c> values.
@@ -1441,9 +1408,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpVector3Parameter(Vector3 value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 	}
 
 	/// <summary>
@@ -1459,9 +1424,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public Vector4Parameter(Vector4 value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Interpolates between two <c>Vector4</c> values.
@@ -1491,9 +1454,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpVector4Parameter(Vector4 value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 	}
 
 	/// <summary>
@@ -1513,9 +1474,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public TextureParameter(Texture value, bool overrideState = false)
-			: this(value, TextureDimension.Any, overrideState)
-		{
-		}
+			: this(value, TextureDimension.Any, overrideState) { }
 
 		/// <summary>
 		/// Creates a new <see cref="TextureParameter"/> instance.
@@ -1561,9 +1520,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpTextureParameter(Texture value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Returns a hash code for the current object.
@@ -1595,9 +1552,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public Texture2DParameter(Texture value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Returns a hash code for the current object.
@@ -1629,9 +1584,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public Texture3DParameter(Texture value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Returns a hash code for the current object.
@@ -1663,9 +1616,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public RenderTextureParameter(RenderTexture value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		// TODO: RenderTexture interpolation
 
@@ -1699,9 +1650,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpRenderTextureParameter(RenderTexture value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Returns a hash code for the current object.
@@ -1733,9 +1682,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public CubemapParameter(Texture value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 		// TODO: Cubemap interpolation
 
 		/// <summary>
@@ -1768,9 +1715,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter.</param>
 		/// <param name="overrideState">The initial override state for the parameter.</param>
 		public NoInterpCubemapParameter(Cubemap value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Returns a hash code for the current object.
@@ -1880,9 +1825,7 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to be stored in the parameter</param>
 		/// <param name="overrideState">The initial override state for the parameter</param>
 		public AnimationCurveParameter(AnimationCurve value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 
 		/// <summary>
 		/// Interpolates between two AnimationCurve values. Note that it will overwrite the values in lhsCurve,
@@ -1939,8 +1882,6 @@ namespace Plugins.VFX.Volumes
 		/// <param name="value">The initial value to store in the parameter</param>
 		/// <param name="overrideState">The initial override state for the parameter</param>
 		public MaterialParameter(Material value, bool overrideState = false)
-			: base(value, overrideState)
-		{
-		}
+			: base(value, overrideState) { }
 	}
 }
