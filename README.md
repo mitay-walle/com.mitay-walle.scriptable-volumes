@@ -4,21 +4,15 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-// This class defines a custom volume component
+
 [System.Serializable]
 [VolumeComponentMenu("Custom/MyCustomVolume")]
 public class MyCustomVolume : VolumeComponent, IPostProcessComponent
 {
-    // Float property for the volume
     public FloatParameter myFloatProperty = new FloatParameter(0f);
-    
-    // Color property for the volume
     public ColorParameter myColorProperty = new ColorParameter(Color.white);
     
-    // Check if the volume is active based on the float property
     public bool IsActive() => myFloatProperty.value > 0f;
-    
-    // Check if the volume is tile compatible
     public bool IsTileCompatible() => false;
 }
 ```
